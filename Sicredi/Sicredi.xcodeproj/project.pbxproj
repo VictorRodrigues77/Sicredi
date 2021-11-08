@@ -22,6 +22,11 @@
 		ACC1BBE527398A8D00879C2C /* EventsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1BBE427398A8D00879C2C /* EventsPresenter.swift */; };
 		ACC1BBE727398A9900879C2C /* EventsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1BBE627398A9900879C2C /* EventsRouter.swift */; };
 		ACC1BBEA27398AAC00879C2C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1BBE927398AAC00879C2C /* Router.swift */; };
+		ACC1BBEF27398F1900879C2C /* EventsDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1BBEE27398F1900879C2C /* EventsDetailBuilder.swift */; };
+		ACC1BBF127398F2100879C2C /* EventsDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1BBF027398F2100879C2C /* EventsDetailInteractor.swift */; };
+		ACC1BBF327398F2900879C2C /* EventsDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1BBF227398F2900879C2C /* EventsDetailPresenter.swift */; };
+		ACC1BBF727398F3600879C2C /* EventsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1BBF627398F3600879C2C /* EventsDetailViewController.swift */; };
+		ACC1BBF927398F3D00879C2C /* EventsDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC1BBF827398F3D00879C2C /* EventsDetail.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +48,11 @@
 		ACC1BBE427398A8D00879C2C /* EventsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsPresenter.swift; sourceTree = "<group>"; };
 		ACC1BBE627398A9900879C2C /* EventsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsRouter.swift; sourceTree = "<group>"; };
 		ACC1BBE927398AAC00879C2C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		ACC1BBEE27398F1900879C2C /* EventsDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailBuilder.swift; sourceTree = "<group>"; };
+		ACC1BBF027398F2100879C2C /* EventsDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailInteractor.swift; sourceTree = "<group>"; };
+		ACC1BBF227398F2900879C2C /* EventsDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailPresenter.swift; sourceTree = "<group>"; };
+		ACC1BBF627398F3600879C2C /* EventsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailViewController.swift; sourceTree = "<group>"; };
+		ACC1BBF827398F3D00879C2C /* EventsDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventsDetail.storyboard; sourceTree = "<group>"; };
 		F636FE0A44B10BBBF22FB94A /* Pods_Sicredi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sicredi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -130,6 +140,7 @@
 			children = (
 				ACC1BBEC27398EDA00879C2C /* Launch */,
 				ACC1BBDD27398A4200879C2C /* Events */,
+				ACC1BBED27398F0100879C2C /* EventsDetail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -161,6 +172,18 @@
 				ACC1BBC62739815D00879C2C /* LaunchScreen.storyboard */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		ACC1BBED27398F0100879C2C /* EventsDetail */ = {
+			isa = PBXGroup;
+			children = (
+				ACC1BBEE27398F1900879C2C /* EventsDetailBuilder.swift */,
+				ACC1BBF027398F2100879C2C /* EventsDetailInteractor.swift */,
+				ACC1BBF227398F2900879C2C /* EventsDetailPresenter.swift */,
+				ACC1BBF627398F3600879C2C /* EventsDetailViewController.swift */,
+				ACC1BBF827398F3D00879C2C /* EventsDetail.storyboard */,
+			);
+			path = EventsDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +248,7 @@
 			files = (
 				ACC1BBC82739815D00879C2C /* LaunchScreen.storyboard in Resources */,
 				ACC1BBDC27398A3700879C2C /* Events.storyboard in Resources */,
+				ACC1BBF927398F3D00879C2C /* EventsDetail.storyboard in Resources */,
 				ACC1BBC52739815D00879C2C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,8 +305,12 @@
 				ACC1BBD92739898000879C2C /* UIImageView+Extension.swift in Sources */,
 				ACC1BBE727398A9900879C2C /* EventsRouter.swift in Sources */,
 				ACC1BBE527398A8D00879C2C /* EventsPresenter.swift in Sources */,
+				ACC1BBF727398F3600879C2C /* EventsDetailViewController.swift in Sources */,
+				ACC1BBEF27398F1900879C2C /* EventsDetailBuilder.swift in Sources */,
+				ACC1BBF327398F2900879C2C /* EventsDetailPresenter.swift in Sources */,
 				ACC1BBEA27398AAC00879C2C /* Router.swift in Sources */,
 				ACC1BBE127398A7C00879C2C /* EventsBuilder.swift in Sources */,
+				ACC1BBF127398F2100879C2C /* EventsDetailInteractor.swift in Sources */,
 				ACC1BBD1273984F000879C2C /* EventsApi.swift in Sources */,
 				ACC1BBD32739864E00879C2C /* EventsModel.swift in Sources */,
 				ACC1BBDF27398A5B00879C2C /* EventsViewController.swift in Sources */,

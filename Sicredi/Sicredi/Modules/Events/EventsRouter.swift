@@ -12,21 +12,16 @@ protocol EventsRouting: AnyObject {
 }
 
 final class EventsRouter: Router, EventsRouting {
-//    private let builder: JokeBuildable
-//
-//    init(builder: JokeBuildable) {
-//        self.builder = builder
-//    }
-    
-    func showDetail(event: Event) {
-        print(event)
+    private let builder: EventsDetailBuildable
+
+    init(builder: EventsDetailBuildable) {
+        self.builder = builder
     }
     
-//    func showJoke(term: String) {
-//        let jokeBuilder = builder.build(term: term)
-//        guard let controller = topNavController else { return }
-//        controller.pushViewController(jokeBuilder, animated: true)
-//    }
+    func showDetail(event: Event) {
+        let builder = builder.build(id: event.id)
+        guard let controller = topNavController else { return }
+        controller.pushViewController(builder, animated: true)
+    }
+    
 }
-
-

@@ -8,23 +8,32 @@
 import UIKit
 
 extension UIImageView {
-    func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
-        contentMode = mode
+    func downloaded(from url: URL, completion: @escaping (Result<UIImage, Error>) -> Void) {
+        contentMode = .scaleAspectFit
         URLSession.shared.dataTask(with: url) { data, response, error in
-            guard
-                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                let data = data, error == nil,
-                let image = UIImage(data: data)
-                else { return }
-            DispatchQueue.main.async() { [weak self] in
-                self?.image = image
+            guard let httpURLResponse = response as? HTTPURLResponse else { return }
+            
+            if httpURLResponse.statusCode != 200 {
+                let error = NSError(domain: "", code: 1, userInfo: nil)
+                completion(.failure(error))
             }
-        }.resume()
+            
+            guard let data = data else { return }
+            
+            if let image = UIImage(data: data) {
+                DispatchQueue.main.async {
+                    completion(.success(image))
+                }
+            } else {
+                let error = NSError(domain: "", code: 1, userInfo: nil)
+                completion(.failure(error))
+            }
+        }
+        .resume()
     }
-    func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
+    func downloaded(from link: String, completion: @escaping (Result<UIImage, Error>) -> Void) {
         guard let url = URL(string: link) else { return }
-        downloaded(from: url, contentMode: mode)
+        downloaded(from: url, completion: completion)
     }
 }
 

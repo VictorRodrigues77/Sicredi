@@ -52,8 +52,7 @@ final class EventsPresenter: EventsPresenterInput {
     
     func selectEvent(at index: Int) {
         guard let events = events else { return }
-        print(events[index])
-//        router.showJoke(term: categories[index])
+        router.showDetail(event: events[index])
     }
     
     func loadEvents() {

@@ -17,7 +17,9 @@ final class EventsBuilder: EventsBuildable {
             network: EventsManager()
         )
         
-        let router = EventsRouter()
+        let router = EventsRouter(
+            builder: EventsDetailBuilder()
+        )
         
         let presenter = EventsPresenter(
             interactor: interactor,
