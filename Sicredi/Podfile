@@ -8,5 +8,6 @@ target 'Sicredi' do
   # Pods for Sicredi
 
 	pod 'Moya', '~> 15.0'
+	pod 'MBProgressHUD', '~> 1.2.0'
 
 end

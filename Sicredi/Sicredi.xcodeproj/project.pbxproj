@@ -9,14 +9,19 @@
 /* Begin PBXBuildFile section */
 		0529693B66277CAA92B51026 /* Pods_Sicredi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F636FE0A44B10BBBF22FB94A /* Pods_Sicredi.framework */; };
 		ACC1BBBC2739815B00879C2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1BBBB2739815B00879C2C /* AppDelegate.swift */; };
-		ACC1BBC02739815B00879C2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1BBBF2739815B00879C2C /* ViewController.swift */; };
-		ACC1BBC32739815B00879C2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC1BBC12739815B00879C2C /* Main.storyboard */; };
 		ACC1BBC52739815D00879C2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC1BBC42739815D00879C2C /* Assets.xcassets */; };
 		ACC1BBC82739815D00879C2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC1BBC62739815D00879C2C /* LaunchScreen.storyboard */; };
 		ACC1BBD1273984F000879C2C /* EventsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1BBD0273984F000879C2C /* EventsApi.swift */; };
 		ACC1BBD32739864E00879C2C /* EventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1BBD22739864E00879C2C /* EventsModel.swift */; };
 		ACC1BBD6273986FD00879C2C /* EventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1BBD5273986FD00879C2C /* EventsManager.swift */; };
 		ACC1BBD92739898000879C2C /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1BBD82739898000879C2C /* UIImageView+Extension.swift */; };
+		ACC1BBDC27398A3700879C2C /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC1BBDB27398A3700879C2C /* Events.storyboard */; };
+		ACC1BBDF27398A5B00879C2C /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1BBDE27398A5B00879C2C /* EventsViewController.swift */; };
+		ACC1BBE127398A7C00879C2C /* EventsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1BBE027398A7C00879C2C /* EventsBuilder.swift */; };
+		ACC1BBE327398A8500879C2C /* EventsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1BBE227398A8500879C2C /* EventsInteractor.swift */; };
+		ACC1BBE527398A8D00879C2C /* EventsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1BBE427398A8D00879C2C /* EventsPresenter.swift */; };
+		ACC1BBE727398A9900879C2C /* EventsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1BBE627398A9900879C2C /* EventsRouter.swift */; };
+		ACC1BBEA27398AAC00879C2C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1BBE927398AAC00879C2C /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +29,6 @@
 		6B8FCCC97049DBC32AC41663 /* Pods-Sicredi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sicredi.release.xcconfig"; path = "Target Support Files/Pods-Sicredi/Pods-Sicredi.release.xcconfig"; sourceTree = "<group>"; };
 		ACC1BBB82739815B00879C2C /* Sicredi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sicredi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC1BBBB2739815B00879C2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ACC1BBBF2739815B00879C2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ACC1BBC22739815B00879C2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACC1BBC42739815D00879C2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACC1BBC72739815D00879C2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACC1BBC92739815D00879C2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,6 +36,13 @@
 		ACC1BBD22739864E00879C2C /* EventsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsModel.swift; sourceTree = "<group>"; };
 		ACC1BBD5273986FD00879C2C /* EventsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsManager.swift; sourceTree = "<group>"; };
 		ACC1BBD82739898000879C2C /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		ACC1BBDB27398A3700879C2C /* Events.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
+		ACC1BBDE27398A5B00879C2C /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		ACC1BBE027398A7C00879C2C /* EventsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsBuilder.swift; sourceTree = "<group>"; };
+		ACC1BBE227398A8500879C2C /* EventsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsInteractor.swift; sourceTree = "<group>"; };
+		ACC1BBE427398A8D00879C2C /* EventsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsPresenter.swift; sourceTree = "<group>"; };
+		ACC1BBE627398A9900879C2C /* EventsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsRouter.swift; sourceTree = "<group>"; };
+		ACC1BBE927398AAC00879C2C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		F636FE0A44B10BBBF22FB94A /* Pods_Sicredi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sicredi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,14 +96,13 @@
 		ACC1BBBA2739815B00879C2C /* Sicredi */ = {
 			isa = PBXGroup;
 			children = (
-				ACC1BBD72739897400879C2C /* Extension */,
-				ACC1BBCF273984D300879C2C /* Network */,
 				ACC1BBBB2739815B00879C2C /* AppDelegate.swift */,
-				ACC1BBBF2739815B00879C2C /* ViewController.swift */,
-				ACC1BBC12739815B00879C2C /* Main.storyboard */,
-				ACC1BBC62739815D00879C2C /* LaunchScreen.storyboard */,
 				ACC1BBC42739815D00879C2C /* Assets.xcassets */,
 				ACC1BBC92739815D00879C2C /* Info.plist */,
+				ACC1BBE827398A9D00879C2C /* Common */,
+				ACC1BBD72739897400879C2C /* Extension */,
+				ACC1BBCF273984D300879C2C /* Network */,
+				ACC1BBDA27398A2600879C2C /* Modules */,
 			);
 			path = Sicredi;
 			sourceTree = "<group>";
@@ -114,6 +123,44 @@
 				ACC1BBD82739898000879C2C /* UIImageView+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		ACC1BBDA27398A2600879C2C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				ACC1BBEC27398EDA00879C2C /* Launch */,
+				ACC1BBDD27398A4200879C2C /* Events */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		ACC1BBDD27398A4200879C2C /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				ACC1BBE027398A7C00879C2C /* EventsBuilder.swift */,
+				ACC1BBE227398A8500879C2C /* EventsInteractor.swift */,
+				ACC1BBE427398A8D00879C2C /* EventsPresenter.swift */,
+				ACC1BBE627398A9900879C2C /* EventsRouter.swift */,
+				ACC1BBDE27398A5B00879C2C /* EventsViewController.swift */,
+				ACC1BBDB27398A3700879C2C /* Events.storyboard */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		ACC1BBE827398A9D00879C2C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				ACC1BBE927398AAC00879C2C /* Router.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		ACC1BBEC27398EDA00879C2C /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				ACC1BBC62739815D00879C2C /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,8 +224,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACC1BBC82739815D00879C2C /* LaunchScreen.storyboard in Resources */,
+				ACC1BBDC27398A3700879C2C /* Events.storyboard in Resources */,
 				ACC1BBC52739815D00879C2C /* Assets.xcassets in Resources */,
-				ACC1BBC32739815B00879C2C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,25 +279,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACC1BBD92739898000879C2C /* UIImageView+Extension.swift in Sources */,
-				ACC1BBC02739815B00879C2C /* ViewController.swift in Sources */,
+				ACC1BBE727398A9900879C2C /* EventsRouter.swift in Sources */,
+				ACC1BBE527398A8D00879C2C /* EventsPresenter.swift in Sources */,
+				ACC1BBEA27398AAC00879C2C /* Router.swift in Sources */,
+				ACC1BBE127398A7C00879C2C /* EventsBuilder.swift in Sources */,
 				ACC1BBD1273984F000879C2C /* EventsApi.swift in Sources */,
 				ACC1BBD32739864E00879C2C /* EventsModel.swift in Sources */,
+				ACC1BBDF27398A5B00879C2C /* EventsViewController.swift in Sources */,
 				ACC1BBD6273986FD00879C2C /* EventsManager.swift in Sources */,
 				ACC1BBBC2739815B00879C2C /* AppDelegate.swift in Sources */,
+				ACC1BBE327398A8500879C2C /* EventsInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ACC1BBC12739815B00879C2C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ACC1BBC22739815B00879C2C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ACC1BBC62739815D00879C2C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -390,7 +434,7 @@
 				INFOPLIST_FILE = Sicredi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Events;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -420,7 +464,7 @@
 				INFOPLIST_FILE = Sicredi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Events;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
