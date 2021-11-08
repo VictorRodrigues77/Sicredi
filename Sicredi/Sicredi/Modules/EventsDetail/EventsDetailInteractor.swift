@@ -9,11 +9,14 @@ import Foundation
 
 protocol EventsDetailInteractorInput: AnyObject {
     func loadEvent()
+    func postCheckIn(name: String, email: String)
 }
 
 protocol EventsDetailInteractorOutput: AnyObject {
     func onFetch(event: Event)
     func onFetch(error: Error)
+    func onCheckIn()
+    func onCheckIn(error: Error)
 }
 
 final class EventsDetailInteractor: EventsDetailInteractorInput {
@@ -35,6 +38,17 @@ final class EventsDetailInteractor: EventsDetailInteractorInput {
             switch result {
             case .success(let event):
                 self.output?.onFetch(event: event)
+            case .failure(let error):
+                self.output?.onFetch(error: error)
+            }
+        }
+    }
+    
+    func postCheckIn(name: String, email: String) {
+        network.postCheckin(eventId: id, name: name, email: email) { result in
+            switch result {
+            case .success(_):
+                self.output?.onCheckIn()
             case .failure(let error):
                 self.output?.onFetch(error: error)
             }

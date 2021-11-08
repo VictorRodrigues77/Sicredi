@@ -9,6 +9,7 @@ import Foundation
 
 protocol EventsDetailPresenterInput: AnyObject {
     func loadEvent()
+    func postCheckIn(name: String, email: String)
 }
 
 protocol EventsDetailPresenterOutput: AnyObject {
@@ -16,6 +17,8 @@ protocol EventsDetailPresenterOutput: AnyObject {
     func hideProgress()
     func onFetchEvent(event: Event)
     func onFetchEvent(error: String)
+    func onCheckIn()
+    func onCheckIn(error: String)
 }
 
 final class EventsDetailPresenter: EventsDetailPresenterInput {
@@ -32,9 +35,25 @@ final class EventsDetailPresenter: EventsDetailPresenterInput {
         interactor.loadEvent()
     }
     
+    func postCheckIn(name: String, email: String) {
+        interactor.postCheckIn(name: name, email: email)
+    }
+    
 }
 
 extension EventsDetailPresenter: EventsDetailInteractorOutput {
+    func onCheckIn() {
+        self.output?.showProgress()
+        DispatchQueue.main.async {
+            self.output?.hideProgress()
+            self.output?.onCheckIn()
+        }
+    }
+    
+    func onCheckIn(error: Error) {
+        self.output?.onCheckIn(error: error.localizedDescription)
+    }
+    
     func onFetch(event: Event) {
         self.output?.showProgress()
         DispatchQueue.main.async {
